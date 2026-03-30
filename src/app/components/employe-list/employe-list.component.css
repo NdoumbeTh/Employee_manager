@@ -1,0 +1,93 @@
+:host {
+  display: flex;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+/* Conteneur centré */
+.table-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centre le titre et le tableau */
+  width: 100%;
+}
+
+/* Titre centré */
+h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: var(--rose-wine);
+  margin-bottom: 2rem; /* espace sous le titre */
+  text-align: center;
+}
+
+/* Tableau centré */
+table {
+  border-collapse: collapse;
+  background: var(--ivory);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+  margin: 0 auto;       /* centre horizontalement */
+  width: 80%;           /* largeur contrôlée */
+  max-width: 900px;     /* limite max */
+}
+
+th, td {
+  padding: 12px 20px;
+  text-align: left;
+}
+
+thead {
+  background: var(--rose-petal);
+}
+
+tr:nth-child(even) {
+  background: var(--cream);
+}
+
+/* Boutons d’action pastel */
+button {
+  border: none;
+  padding: 8px 16px;
+  margin-right: 8px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+/* Bouton Modifier : bleu pastel */
+button.edit-btn {
+  background: #b5d9e8;   /* bleu clair */
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(123, 188, 214, 0.3);
+}
+
+button.edit-btn:hover {
+  background: #7bbcd6;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(123, 188, 214, 0.45);
+}
+
+/* Bouton Supprimer : rose pastel */
+button.delete-btn {
+  background: #f5a3a3;   /* rose clair */
+  color: #fff;
+  box-shadow: 0 3px 10px rgba(224, 107, 107, 0.3);
+}
+
+button.delete-btn:hover {
+  background: #e06b6b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(224, 107, 107, 0.45);
+}
+
+/* Cellule Actions en flex */
+td:last-child {
+  display: flex;
+  align-items: center;   /* aligne verticalement */
+  gap: 10px;             /* espace horizontal entre les boutons */
+}

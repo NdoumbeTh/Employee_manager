@@ -1,0 +1,28 @@
+<div class="table-wrapper">
+  <h2>Liste des employés</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Email</th>
+        <th>Poste</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      @for (emp of employes; track emp.id) {
+        <tr>
+          <td>{{emp.nom}} {{ emp.prenom }}</td>
+          <td>{{emp.email}}</td>
+          <td>{{emp.poste}}</td>
+          <td>
+            <button (click)="editEmploye(emp.id!)">Modifier</button>
+            <button (click)="deleteEmploye(emp.id!)">Supprimer</button>
+          </td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

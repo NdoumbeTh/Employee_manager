@@ -1,0 +1,25 @@
+<div class="form-wrapper">
+  <h2>{{ isEditMode ? 'Modifier Employé' : 'Ajouter Employé' }}</h2>
+
+  <form [formGroup]="employeForm" (ngSubmit)="save()">
+
+    <label>Nom</label>
+    <input type="text" formControlName="nom">
+
+    <label>Prénom</label>
+    <input type="text" formControlName="prenom">
+
+    <label>Email</label>
+    <input type="email" formControlName="email">
+
+    <label>Poste</label>
+    <input type="text" formControlName="poste">
+
+    <label>Téléphone</label>
+    <input type="text" formControlName="telephone">
+
+    <button type="submit">
+      {{ isEditMode ? 'Mettre à jour' : 'Enregistrer' }}
+    </button>
+  </form>
+</div>

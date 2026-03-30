@@ -1,0 +1,79 @@
+h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--rose-wine);
+  letter-spacing: 0.04em;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin: 1rem 0;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.45rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-mid);
+  border: 1.5px solid var(--rose-blush);
+  transition: all 0.25s ease;
+}
+
+nav a:hover { background: var(--rose-petal); color: var(--rose-wine); }
+nav a:last-child:hover { background: var(--rose-deep); border-color: var(--rose-deep); }
+
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--rose-blush), var(--gold), var(--rose-blush), transparent);
+  opacity: 0.6;
+  margin: 1rem 0 0;
+}
+.spinner {
+  border: 2px solid #fff;
+  border-top: 2px solid var(--rose-deep);
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  animation: spin 0.8s linear infinite;
+  margin-right: 6px;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.spinner {
+  border: 2px solid #fff;
+  border-top: 2px solid var(--rose-deep);
+  border-radius: 50%;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  animation: spin 0.8s linear infinite;
+  margin-right: 6px;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+a.loading {
+  pointer-events: none; /* empêche de recliquer */
+  opacity: 0.6;
+}

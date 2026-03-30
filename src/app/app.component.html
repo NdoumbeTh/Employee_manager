@@ -1,0 +1,20 @@
+<h1>Employee Manager</h1>
+
+<nav>
+
+<a routerLink="/employes" (click)="goToEmployes()" [class.loading]="isLoading">
+  @if (isLoading) {
+    <span class="spinner"></span> Chargement...
+  } @else {
+    Liste employés
+  }
+</a>
+
+<a routerLink="/add">Ajouter</a>
+
+
+</nav>
+
+<hr>
+
+<router-outlet></router-outlet>
